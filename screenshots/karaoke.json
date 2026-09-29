@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/karaoke",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Aluguel de Karaokê em Itajaí, BC, Camboriú e SC | Disco Laser",
+      "hasCanvas": false,
+      "bodyTextLen": 1310,
+      "bodyTextHash": "89e3eb7afec0e1681f53655b6a6468475a79532bf27303f87db376d8fc6b0b1f",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ Início Karaokê Jukebox TV Som Repe",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/karaoke.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Aluguel de Karaokê em Itajaí, BC, Camboriú e SC | Disco Laser",
+      "hasCanvas": false,
+      "bodyTextLen": 1250,
+      "bodyTextHash": "a0edf81e0b255afdb0780a488828e40f79c31bf2b9d65413d766f3d929e2ab13",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ ALUGUEL DE KARAOKÊ O microfone que",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/karaoke-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/karaoke.json"
+}

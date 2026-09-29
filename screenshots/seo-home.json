@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Aluguel de Karaokê em Itajaí, BC e Camboriú | Disco Laser",
+      "hasCanvas": false,
+      "bodyTextLen": 2890,
+      "bodyTextHash": "8bb7dcb94d9c5384b4d77595365ec07b4f7c2a213ad8964ce62861ab5cf2e105",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ Início Karaokê Jukebox TV Som Repe",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/seo-home.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Aluguel de Karaokê em Itajaí, BC e Camboriú | Disco Laser",
+      "hasCanvas": false,
+      "bodyTextLen": 2845,
+      "bodyTextHash": "4c3d9d51710b4b52fb295d34012c5197970c8e8f724ebb27888c55827ba0a04f",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ CAMBORIÚ · ITAJAÍ · BALNEÁRIO CAMB",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/seo-home-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/seo-home.json"
+}

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/regiao/itajai",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Aluguel de karaokê em Itajaí, SC | Disco Laser",
+      "hasCanvas": false,
+      "bodyTextLen": 1622,
+      "bodyTextHash": "d8069894f82d70c56cc8f107e21c7c13e0ffbc9191ca2c5a24c110456943f79d",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ Início Karaokê Jukebox TV Som Repe",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/itajai.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Aluguel de karaokê em Itajaí, SC | Disco Laser",
+      "hasCanvas": false,
+      "bodyTextLen": 1577,
+      "bodyTextHash": "c11d5f134e639eafd4fca893649538122dea43fc080fdca9f8e0400b1acc479d",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ LITORAL NORTE Aluguel de karaokê e",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/itajai-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/itajai.json"
+}

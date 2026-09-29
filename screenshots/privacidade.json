@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/privacidade",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Política de Privacidade | Disco Laser Locações",
+      "hasCanvas": false,
+      "bodyTextLen": 3697,
+      "bodyTextHash": "431ea258958e57d39b4f1635650a63cfde358aee9ba9a92f4dd0832b7fe70af9",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ Início Karaokê Jukebox TV Som Repe",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/privacidade.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Política de Privacidade | Disco Laser Locações",
+      "hasCanvas": false,
+      "bodyTextLen": 3652,
+      "bodyTextHash": "91ee9f7eff49808681a197f9fb3c49cd517c0dd4f99c98fdc85e5ffc44a146e1",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ DISCO LASER LOCAÇÕES Política de P",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/privacidade-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/privacidade.json"
+}

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/repertorio",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Repertório de Karaokê | Disco Laser",
+      "hasCanvas": false,
+      "bodyTextLen": 3885,
+      "bodyTextHash": "7b285547bdb15569af82466b49fa8fd707d97d78fabafd8488236205b67e9084",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ Início Karaokê Jukebox TV Som Repe",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/repertorio.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Repertório de Karaokê | Disco Laser",
+      "hasCanvas": false,
+      "bodyTextLen": 3069,
+      "bodyTextHash": "e0ee06fae218c7bd2d80e75b17f9ecb87f70ef0c9e9651744433a2b124daaace",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ KARAOKÊ 41 Repertório Amostra do c",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/repertorio-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/repertorio.json"
+}

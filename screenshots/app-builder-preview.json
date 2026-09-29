@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Aluguel de Karaokê, Jukebox, TV e Som em SC | Disco Laser Locações",
+      "hasCanvas": false,
+      "bodyTextLen": 2588,
+      "bodyTextHash": "0a1915a79d589468e719bb87d58a71c6d99b118c4bc95b2ade4d4e42f99a4c12",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ Início Karaokê Jukebox TV Som Repe",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Aluguel de Karaokê, Jukebox, TV e Som em SC | Disco Laser Locações",
+      "hasCanvas": false,
+      "bodyTextLen": 2528,
+      "bodyTextHash": "e5c876d56c84cda5f6676a7425f91dbc704df4580253e4caf3d31b33d23117ea",
+      "bodyTextPrefix": "DISCO LASER JUKEBOX E KARAOKÊ CAMBORIÚ E TODA A REGIÃO A festa c",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
