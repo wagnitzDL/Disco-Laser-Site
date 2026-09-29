@@ -219,18 +219,31 @@ function Home() {
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild>
-                <Link to="/repertorio">
-                  Buscar músicas
-                  <ArrowRight className="size-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline">
                 <a
                   href={SITE.catalogApp}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Buscador completo
+                  APP de Buscar Músicas
+                  <ArrowRight className="size-4" />
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a
+                  href={SITE.nacionalPdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  PDF nacional
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a
+                  href={SITE.internacionalPdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  PDF internacional
                 </a>
               </Button>
             </div>

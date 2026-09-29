@@ -5,16 +5,12 @@ import { Kicker, Section } from "@/components/section";
 import { LeadLink } from "@/components/lead-link";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { faqLd, jsonLdScript, pageMeta } from "@/lib/seo";
+import { SITE } from "@/lib/site";
 
 const PG_PHONE = "5542999617410";
 const PG_TEL = "tel:+5542999617410";
 const PG_DISPLAY = "(42) 99961-7410";
 const PG_TEXT = "Alugar Karaoke";
-
-const PDF_NACIONAL =
-  "https://drive.google.com/file/d/1pE-ZzbHvfjhdyw7Av_G7r6IgxKfpC3yN/view?usp=sharing";
-const PDF_INTERNACIONAL =
-  "https://drive.google.com/file/d/1qdhamUc4Wo8MnF3Wdx1XIX6ZN0nCAFIb/view";
 
 export const Route = createFileRoute("/pg")({
   head: () => {
@@ -118,15 +114,15 @@ function PontaGrossaPage() {
         </p>
         <div className="mt-8 grid gap-3 sm:grid-cols-3">
           <Button asChild variant="outline" className="h-auto py-4">
-            <a href="/repertorio">
-              Buscador de músicas
+            <a href={SITE.catalogApp} target="_blank" rel="noopener noreferrer">
+              APP de Buscar Músicas
               <span className="block text-xs font-normal text-muted">
-                clique para entrar na busca
+                app.dljk.com.br
               </span>
             </a>
           </Button>
           <Button asChild variant="outline" className="h-auto py-4">
-            <a href={PDF_NACIONAL} target="_blank" rel="noopener noreferrer">
+            <a href={SITE.nacionalPdf} target="_blank" rel="noopener noreferrer">
               Lista músicas nacionais
               <span className="block text-xs font-normal text-muted">
                 clique para baixar PDF
@@ -135,7 +131,7 @@ function PontaGrossaPage() {
           </Button>
           <Button asChild variant="outline" className="h-auto py-4">
             <a
-              href={PDF_INTERNACIONAL}
+              href={SITE.internacionalPdf}
               target="_blank"
               rel="noopener noreferrer"
             >

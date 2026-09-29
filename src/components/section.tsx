@@ -42,12 +42,14 @@ export function PageHero({
   lead,
   image,
   imageAlt,
+  children,
 }: {
   kicker: string;
   title: string;
   lead: string;
   image: string;
   imageAlt: string;
+  children?: ReactNode;
 }) {
   return (
     <section className="relative isolate min-h-[70vh] overflow-hidden">
@@ -71,6 +73,7 @@ export function PageHero({
         >
           {lead}
         </p>
+        {children}
       </div>
     </section>
   );

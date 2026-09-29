@@ -1,5 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check, ExternalLink } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -117,7 +117,29 @@ function KaraokePage() {
         lead="O microfone que salva a festa. Kit com TV, som e mais de 10 mil músicas em Itajaí, Balneário Camboriú, Camboriú, Itapema e região. Entrega e montagem."
         image="/images/karaoke-festa.jpg"
         imageAlt="Amigos cantando karaokê"
-      />
+      >
+        <div className="rise-in mt-6 flex flex-wrap gap-3" style={{ animationDelay: "200ms" }}>
+          <Button asChild>
+            <a href={SITE.catalogApp} target="_blank" rel="noopener noreferrer">
+              APP de Buscar Músicas
+            </a>
+          </Button>
+          <Button asChild variant="outline">
+            <a href={SITE.nacionalPdf} target="_blank" rel="noopener noreferrer">
+              PDF nacional
+            </a>
+          </Button>
+          <Button asChild variant="outline">
+            <a
+              href={SITE.internacionalPdf}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PDF internacional
+            </a>
+          </Button>
+        </div>
+      </PageHero>
 
       <Section>
         <div className="grid gap-12 lg:grid-cols-2">
@@ -164,34 +186,9 @@ function KaraokePage() {
         <Kicker>Repertório</Kicker>
         <h2 className="font-display mt-2 text-4xl">Consulte antes da festa</h2>
         <p className="mt-3 max-w-xl text-sm text-muted">
-          Listas nacionais e internacionais em PDF, além do buscador online
-          com o catálogo completo.
+          Listas nacionais e internacionais em PDF, além da busca no site com
+          o catálogo completo.
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <Button asChild>
-            <Link to="/repertorio">Buscar no site</Link>
-          </Button>
-          <Button asChild variant="outline">
-            <a href={SITE.catalogApp} target="_blank" rel="noopener noreferrer">
-              Buscador completo
-              <ExternalLink className="size-4" />
-            </a>
-          </Button>
-          <Button asChild variant="ghost">
-            <a href={SITE.nacionalPdf} target="_blank" rel="noopener noreferrer">
-              PDF nacional
-            </a>
-          </Button>
-          <Button asChild variant="ghost">
-            <a
-              href={SITE.internacionalPdf}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              PDF internacional
-            </a>
-          </Button>
-        </div>
         <div className="mt-10 aspect-video overflow-hidden rounded-xl bg-elevated">
           <iframe
             className="size-full"

@@ -14,8 +14,10 @@ export const SITE = {
   instagram: "https://www.instagram.com/discolaser2",
   facebook: "https://www.facebook.com/discolaser/",
   catalogApp: "https://app.dljk.com.br/",
-  nacionalPdf: "https://www.dljk.com.br/nacional.pdf",
-  internacionalPdf: "https://www.dljk.com.br/internacional.pdf",
+  nacionalPdf:
+    "https://drive.google.com/file/d/1pE-ZzbHvfjhdyw7Av_G7r6IgxKfpC3yN/view?usp=sharing",
+  internacionalPdf:
+    "https://drive.google.com/file/d/1qdhamUc4Wo8MnF3Wdx1XIX6ZN0nCAFIb/view",
   address: {
     street: "Rua Manoel Anastácio Pereira, 85",
     neighborhood: "Centro",
@@ -78,7 +80,6 @@ export const NAV = [
   { href: "/jukebox", label: "Jukebox" },
   { href: "/tv", label: "TV" },
   { href: "/som", label: "Som" },
-  { href: "/repertorio", label: "Repertório" },
 ] as const;
 
 export function waLink(text: string, phone = SITE.whatsappE164) {

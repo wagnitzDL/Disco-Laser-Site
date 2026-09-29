@@ -12,7 +12,6 @@ export const PUBLIC_PATHS = [
   "/jukebox",
   "/tv",
   "/som",
-  "/repertorio",
   "/pg",
   "/privacidade",
   "/regiao",
