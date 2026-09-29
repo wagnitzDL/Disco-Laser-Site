@@ -170,14 +170,10 @@ export default defineConfig(({ command, isPreview }) => ({
     ...(command === "build" || isPreview
       ? [
           nitro({
-            // Vercel (publicação da plataforma) usa o Build Output API.
-            // Na Hostinger não existe essa pasta, então o build de Node
-            // sai em dist/ para o painel achar a saída e o server/index.mjs.
+            // Vercel usa o Build Output API. Na Hostinger o painel espera
+            // a pasta padrão do Nitro, .output, com entrada server/index.mjs.
             preset: isPreview || process.env.VERCEL === "1" ? "vercel" : "node-server",
             serverDir: "./server",
-            ...(isPreview || process.env.VERCEL === "1"
-              ? {}
-              : { output: { dir: "dist" } }),
           }),
         ]
       : []),
