@@ -60,6 +60,14 @@ export function SiteFooter() {
             </li>
           </ul>
           <ul className="mt-4 grid gap-2">
+            <li>
+              <Link
+                to="/pg"
+                className="text-sm text-muted hover:text-foreground"
+              >
+                Karaokê em Ponta Grossa
+              </Link>
+            </li>
             {REGIONS.slice(0, 6).map((city) => (
               <li key={city.slug}>
                 <Link

@@ -81,8 +81,8 @@ export const NAV = [
   { href: "/repertorio", label: "Repertório" },
 ] as const;
 
-export function waLink(text: string) {
-  return `https://api.whatsapp.com/send?phone=${SITE.whatsappE164}&text=${encodeURIComponent(text)}`;
+export function waLink(text: string, phone = SITE.whatsappE164) {
+  return `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
 }
 
 export const DEFAULT_WA =

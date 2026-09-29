@@ -1,5 +1,5 @@
 import { forwardRef, useEffect, useState, type ReactNode } from "react";
-import { captureCampaign, goToThanks, trackLead, trackedWa } from "@/lib/ads";
+import { captureCampaign, goToThanks, trackLead, withCampaign } from "@/lib/ads";
 import { SITE, waLink } from "@/lib/site";
 
 export const LeadLink = forwardRef<
@@ -9,16 +9,23 @@ export const LeadLink = forwardRef<
     text?: string;
     className?: string;
     children: ReactNode;
+    whatsappE164?: string;
+    phoneHref?: string;
   }
->(function LeadLink({ channel, text, className, children }, ref) {
+>(function LeadLink(
+  { channel, text, className, children, whatsappE164, phoneHref },
+  ref,
+) {
   const message = text ?? "Olá, gostaria de informações da Disco Laser";
-  const plain = channel === "phone" ? SITE.phoneHref : waLink(message);
+  const phone = whatsappE164 ?? SITE.whatsappE164;
+  const plain =
+    channel === "phone" ? (phoneHref ?? SITE.phoneHref) : waLink(message, phone);
   const [href, setHref] = useState(plain);
 
   useEffect(() => {
     captureCampaign();
-    if (channel === "whatsapp") setHref(trackedWa(message));
-  }, [channel, message]);
+    if (channel === "whatsapp") setHref(waLink(withCampaign(message), phone));
+  }, [channel, message, phone]);
 
   return (
     <a

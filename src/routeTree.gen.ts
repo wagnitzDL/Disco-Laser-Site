@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as JukeboxRouteImport } from './routes/jukebox'
 import { Route as KaraokeRouteImport } from './routes/karaoke'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
+import { Route as PgRouteImport } from './routes/pg'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as RepertorioRouteImport } from './routes/repertorio'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -39,6 +40,11 @@ const KaraokeRoute = KaraokeRouteImport.update({
 const ObrigadoRoute = ObrigadoRouteImport.update({
   id: '/obrigado',
   path: '/obrigado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PgRoute = PgRouteImport.update({
+  id: '/pg',
+  path: '/pg',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacidadeRoute = PrivacidadeRouteImport.update({
@@ -82,6 +88,7 @@ export interface FileRoutesByFullPath {
   '/jukebox': typeof JukeboxRoute
   '/karaoke': typeof KaraokeRoute
   '/obrigado': typeof ObrigadoRoute
+  '/pg': typeof PgRoute
   '/privacidade': typeof PrivacidadeRoute
   '/repertorio': typeof RepertorioRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -95,6 +102,7 @@ export interface FileRoutesByTo {
   '/jukebox': typeof JukeboxRoute
   '/karaoke': typeof KaraokeRoute
   '/obrigado': typeof ObrigadoRoute
+  '/pg': typeof PgRoute
   '/privacidade': typeof PrivacidadeRoute
   '/repertorio': typeof RepertorioRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -109,6 +117,7 @@ export interface FileRoutesById {
   '/jukebox': typeof JukeboxRoute
   '/karaoke': typeof KaraokeRoute
   '/obrigado': typeof ObrigadoRoute
+  '/pg': typeof PgRoute
   '/privacidade': typeof PrivacidadeRoute
   '/repertorio': typeof RepertorioRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -124,6 +133,7 @@ export interface FileRouteTypes {
     | '/jukebox'
     | '/karaoke'
     | '/obrigado'
+    | '/pg'
     | '/privacidade'
     | '/repertorio'
     | '/sitemap.xml'
@@ -137,6 +147,7 @@ export interface FileRouteTypes {
     | '/jukebox'
     | '/karaoke'
     | '/obrigado'
+    | '/pg'
     | '/privacidade'
     | '/repertorio'
     | '/sitemap.xml'
@@ -150,6 +161,7 @@ export interface FileRouteTypes {
     | '/jukebox'
     | '/karaoke'
     | '/obrigado'
+    | '/pg'
     | '/privacidade'
     | '/repertorio'
     | '/sitemap.xml'
@@ -164,6 +176,7 @@ export interface RootRouteChildren {
   JukeboxRoute: typeof JukeboxRoute
   KaraokeRoute: typeof KaraokeRoute
   ObrigadoRoute: typeof ObrigadoRoute
+  PgRoute: typeof PgRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   RepertorioRoute: typeof RepertorioRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -201,6 +214,13 @@ declare module '@tanstack/react-router' {
       path: '/obrigado'
       fullPath: '/obrigado'
       preLoaderRoute: typeof ObrigadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pg': {
+      id: '/pg'
+      path: '/pg'
+      fullPath: '/pg'
+      preLoaderRoute: typeof PgRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacidade': {
@@ -260,6 +280,7 @@ const rootRouteChildren: RootRouteChildren = {
   JukeboxRoute: JukeboxRoute,
   KaraokeRoute: KaraokeRoute,
   ObrigadoRoute: ObrigadoRoute,
+  PgRoute: PgRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   RepertorioRoute: RepertorioRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

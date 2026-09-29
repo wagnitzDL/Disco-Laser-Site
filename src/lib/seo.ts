@@ -13,6 +13,7 @@ export const PUBLIC_PATHS = [
   "/tv",
   "/som",
   "/repertorio",
+  "/pg",
   "/privacidade",
   "/regiao",
   ...REGIONS.map((r) => `/regiao/${r.slug}`),
