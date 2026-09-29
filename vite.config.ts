@@ -170,11 +170,14 @@ export default defineConfig(({ command, isPreview }) => ({
     ...(command === "build" || isPreview
       ? [
           nitro({
-            preset: "vercel",
-            // Auto-registers server/middleware/* (the PWA install page +
-            // manifest + head-tag middleware). Nitro v3 defaults serverDir to
-            // false, so removing this silently unwires /?install=1 on deploys.
+            // Vercel (publicação da plataforma) usa o Build Output API.
+            // Na Hostinger não existe essa pasta, então o build de Node
+            // sai em dist/ para o painel achar a saída e o server/index.mjs.
+            preset: isPreview || process.env.VERCEL === "1" ? "vercel" : "node-server",
             serverDir: "./server",
+            ...(isPreview || process.env.VERCEL === "1"
+              ? {}
+              : { output: { dir: "dist" } }),
           }),
         ]
       : []),
