@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Menu } from "lucide-react";
+import { Menu, Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { QuoteDialog } from "@/components/quote-dialog";
-import { NAV } from "@/lib/site";
+import { NAV, SITE } from "@/lib/site";
 import { LeadLink } from "@/components/lead-link";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
 import { cn } from "@/lib/utils";
@@ -54,19 +54,47 @@ function NavLinks({
   );
 }
 
+function SocialLinks({ className }: { className?: string }) {
+  return (
+    <div className={cn("flex items-center gap-1", className)}>
+      <a
+        href={SITE.instagram}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        className="flex size-10 items-center justify-center text-muted transition-colors hover:text-gold"
+      >
+        <Instagram className="size-4" />
+      </a>
+      <a
+        href={SITE.facebook}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        className="flex size-10 items-center justify-center text-muted transition-colors hover:text-gold"
+      >
+        <Facebook className="size-4" />
+      </a>
+    </div>
+  );
+}
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link to="/" aria-label="Disco Laser — início" className="shrink-0">
-          <img
-            src="/images/logo.png"
-            alt="Discolaser"
-            className="h-10 w-auto outline-none sm:h-11"
-          />
-        </Link>
+        <div className="flex shrink-0 items-center gap-1">
+          <Link to="/" aria-label="Disco Laser — início" className="shrink-0">
+            <img
+              src="/images/logo.png"
+              alt="Discolaser"
+              className="h-10 w-auto outline-none sm:h-11"
+            />
+          </Link>
+          <SocialLinks className="hidden md:flex" />
+        </div>
         <NavLinks />
         <div className="flex items-center gap-2">
           <Button
@@ -87,6 +115,7 @@ export function SiteHeader() {
               </Button>
             }
           />
+          <SocialLinks className="md:hidden" />
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button
