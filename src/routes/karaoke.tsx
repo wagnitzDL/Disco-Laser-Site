@@ -114,7 +114,7 @@ function KaraokePage() {
       <PageHero
         kicker="Aluguel de karaokê"
         title="Aluguel de karaokê em Santa Catarina"
-        lead="O microfone que salva a festa. Kit com TV, som e mais de 10 mil músicas em Itajaí, Balneário Camboriú, Camboriú, Itapema e região. Entrega e montagem."
+        lead="O microfone que salva a festa. Kit com TV, som e mais de 10 mil músicas em Camboriú, Itajaí, Balneário Camboriú, Itapema, Brusque, Blumenau, Joinville, Florianópolis e toda Região. Entrega e montagem."
         image="/images/karaoke-festa.jpg"
         imageAlt="Amigos cantando karaokê"
       >

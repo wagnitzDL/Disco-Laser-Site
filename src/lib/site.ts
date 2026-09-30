@@ -79,7 +79,7 @@ export const NAV = [
   { href: "/karaoke", label: "Karaokê" },
   { href: "/jukebox", label: "Jukebox" },
   { href: "/tv", label: "TV" },
-  { href: "/som", label: "Som" },
+  { href: "/som", label: "Equip. Som" },
 ] as const;
 
 export function waLink(text: string, phone = SITE.whatsappE164) {

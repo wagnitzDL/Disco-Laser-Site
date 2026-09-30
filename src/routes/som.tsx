@@ -27,13 +27,13 @@ export const Route = createFileRoute("/som")({
 
 const GEAR = [
   {
-    name: "Caixa ativa Electro-Voice ZX15",
+    name: "Caixa ativa Electro-Voice ZLX-12",
     spec: "1000 W",
     img: "/images/som-ev.jpg",
   },
   {
     name: "Caixa ativa JBL JS15BT",
-    spec: "15\" · 200 W RMS",
+    spec: "15 polegadas · 200 W RMS",
     img: "/images/som-jbl.jpg",
   },
   {
@@ -42,9 +42,14 @@ const GEAR = [
     img: "/images/som-grt12.jpg",
   },
   {
-    name: "Line vertical MAK PRO 12\"",
+    name: "Caixa MAK PRO 12 polegadas",
     spec: "MK-CA4.8SW12.1K · 500 W",
     img: "/images/som-mak.jpg",
+  },
+  {
+    name: "Line vertical MAK PRO montado",
+    spec: "Sistema completo",
+    img: "/images/som-mak-full.jpg",
   },
 ];
 

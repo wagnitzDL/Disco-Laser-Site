@@ -46,7 +46,7 @@ function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/55 to-background/20" />
         <div className="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-16 sm:px-6 sm:pb-24">
-          <Kicker className="rise-in">Camboriú · Itajaí · Balneário Camboriú</Kicker>
+          <Kicker className="rise-in">Itajaí · Balneário Camboriú · Blumenau · Florianópolis</Kicker>
           <h1
             className="font-display rise-in mt-3 max-w-4xl text-display text-foreground"
             style={{ animationDelay: "70ms" }}
@@ -59,9 +59,10 @@ function Home() {
             className="rise-in mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
             style={{ animationDelay: "130ms" }}
           >
-            A festa começa quando o microfone liga. Jukebox, TV e som com
-            entrega e montagem a partir de Camboriú — Itajaí, Balneário
-            Camboriú, Itapema e o Vale.
+            A festa começa quando o microfone liga. Karaokê, TV's.
+            Equipamentos de som e Jukebox; Com entrega e montagem em:
+            Camboriú, Itajaí, Balneário Camboriú, Itapema, Brusque, Blumenau,
+            Joinville, Florianópolis e Região.
           </p>
           <div
             className="rise-in mt-8 flex flex-wrap gap-3"
