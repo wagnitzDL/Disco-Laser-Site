@@ -131,11 +131,24 @@ function Home() {
                     : "group relative isolate min-h-72 overflow-hidden rounded-xl"
                 }
               >
-                <img
-                  src={svc.image}
-                  alt=""
-                  className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                {featured ? (
+                  <video
+                    src="/videos/karaoke-card.mp4"
+                    poster="/images/karaoke-card-poster.jpg"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    aria-hidden
+                    className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <img
+                    src={svc.image}
+                    alt=""
+                    className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
                 <div className="relative flex h-full min-h-72 flex-col justify-end p-6 sm:p-8">
                   <span className="inline-flex size-10 items-center justify-center rounded-md bg-elevated/80 text-gold">
