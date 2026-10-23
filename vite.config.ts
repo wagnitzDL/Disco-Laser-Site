@@ -12,7 +12,32 @@ import { grokPwaPlugin } from "./scripts/grok-pwa-plugin.mjs";
 import { appEnvPlugin } from "./scripts/app-env-plugin.mjs";
 import { isMigrationFile } from "./scripts/migration-plan.mjs";
 
-/** The files `src/lib/db.ts` globs — same directory, same non-recursive scope. */
+function stripTrailingSlashPlugin(): Plugin {
+  return {
+    name: "strip-trailing-slash",
+    enforce: "pre",
+    configureServer(server) {
+      return () => {
+        server.middlewares.stack.unshift({
+          route: "",
+          handle(req, _res, next) {
+            if (req.url && req.url.length > 1) {
+              const q = req.url.indexOf("?");
+              const path = q === -1 ? req.url : req.url.slice(0, q);
+              const search = q === -1 ? "" : req.url.slice(q);
+              if (path.length > 1 && path.endsWith("/")) {
+                const clean = path.replace(/\/+$/, "") + search;
+                req.url = clean;
+                req.originalUrl = clean;
+              }
+            }
+            next();
+          },
+        });
+      };
+    },
+  };
+}
 function hasGlobbedMigrations(root: string): boolean {
   try {
     return readdirSync(join(root, "migrations")).some(isMigrationFile);
@@ -158,6 +183,7 @@ export default defineConfig(({ command, isPreview }) => ({
   },
   resolve: { tsconfigPaths: true },
   plugins: [
+    stripTrailingSlashPlugin(),
     pgliteBootstrapPlugin(),
     // Before tanstackStart so /auth/popup never falls through to the SPA.
     authPopupPlugin(),

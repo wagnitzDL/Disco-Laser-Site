@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as JukeboxRouteImport } from './routes/jukebox'
+import { Route as KarDothtmlRouteImport } from './routes/kar[.]html'
 import { Route as KaraokeRouteImport } from './routes/karaoke'
 import { Route as ObrigadoRouteImport } from './routes/obrigado'
 import { Route as PgRouteImport } from './routes/pg'
@@ -30,6 +31,11 @@ const IndexRoute = IndexRouteImport.update({
 const JukeboxRoute = JukeboxRouteImport.update({
   id: '/jukebox',
   path: '/jukebox',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KarDothtmlRoute = KarDothtmlRouteImport.update({
+  id: '/kar.html',
+  path: '/kar.html',
   getParentRoute: () => rootRouteImport,
 } as any)
 const KaraokeRoute = KaraokeRouteImport.update({
@@ -86,6 +92,7 @@ const RegiaoCidadeRoute = RegiaoCidadeRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/jukebox': typeof JukeboxRoute
+  '/kar.html': typeof KarDothtmlRoute
   '/karaoke': typeof KaraokeRoute
   '/obrigado': typeof ObrigadoRoute
   '/pg': typeof PgRoute
@@ -100,6 +107,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/jukebox': typeof JukeboxRoute
+  '/kar.html': typeof KarDothtmlRoute
   '/karaoke': typeof KaraokeRoute
   '/obrigado': typeof ObrigadoRoute
   '/pg': typeof PgRoute
@@ -115,6 +123,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/jukebox': typeof JukeboxRoute
+  '/kar.html': typeof KarDothtmlRoute
   '/karaoke': typeof KaraokeRoute
   '/obrigado': typeof ObrigadoRoute
   '/pg': typeof PgRoute
@@ -131,6 +140,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/jukebox'
+    | '/kar.html'
     | '/karaoke'
     | '/obrigado'
     | '/pg'
@@ -145,6 +155,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/jukebox'
+    | '/kar.html'
     | '/karaoke'
     | '/obrigado'
     | '/pg'
@@ -159,6 +170,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/jukebox'
+    | '/kar.html'
     | '/karaoke'
     | '/obrigado'
     | '/pg'
@@ -174,6 +186,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   JukeboxRoute: typeof JukeboxRoute
+  KarDothtmlRoute: typeof KarDothtmlRoute
   KaraokeRoute: typeof KaraokeRoute
   ObrigadoRoute: typeof ObrigadoRoute
   PgRoute: typeof PgRoute
@@ -200,6 +213,13 @@ declare module '@tanstack/react-router' {
       path: '/jukebox'
       fullPath: '/jukebox'
       preLoaderRoute: typeof JukeboxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kar.html': {
+      id: '/kar.html'
+      path: '/kar.html'
+      fullPath: '/kar.html'
+      preLoaderRoute: typeof KarDothtmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/karaoke': {
@@ -278,6 +298,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   JukeboxRoute: JukeboxRoute,
+  KarDothtmlRoute: KarDothtmlRoute,
   KaraokeRoute: KaraokeRoute,
   ObrigadoRoute: ObrigadoRoute,
   PgRoute: PgRoute,

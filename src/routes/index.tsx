@@ -133,8 +133,8 @@ function Home() {
               >
                 {featured ? (
                   <video
-                    src="/videos/karaoke-card.mp4"
-                    poster="/images/karaoke-card-poster.jpg"
+                    src="/videos/karaoke-card.mp4?v=2"
+                    poster="/images/karaoke-card-poster.jpg?v=2"
                     autoPlay
                     muted
                     loop

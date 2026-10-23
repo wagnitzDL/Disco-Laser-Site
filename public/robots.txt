@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+Sitemap: https://www.dljk.com.br/sitemap.xml
